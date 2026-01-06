@@ -8,7 +8,7 @@ COLOR_MAP = {
     "common": "#8172B2"       # Purple
 }
 
-def plot_layout(area, containers, title="Layout", grid_step=0.5, global_angle=0):
+def plot_layout(area, containers, title="Layout", grid_step=0.5, global_angle=0, name='layout'):
     fig, ax = plt.subplots()
     area_patch = Polygon(area.polygon, closed=True, fill=False, edgecolor="black", linewidth=2)
     ax.add_patch(area_patch)
@@ -38,4 +38,4 @@ def plot_layout(area, containers, title="Layout", grid_step=0.5, global_angle=0)
     ax.set_xlim(min(xs) - 1, max(xs) + 1)
     ax.set_ylim(min(ys) - 1, max(ys) + 1)
     ax.axis("off")
-    plt.savefig("layout.png")
+    plt.savefig(name+".png")
