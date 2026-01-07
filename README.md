@@ -38,17 +38,20 @@ P: Kara nakładana za brak kluczowych typów kontenerów (brak kuchni: -50, brak
 
 
 
-55. Wnioski z analizy parametrów dla main_generational.py
+5. **Wnioski**
+   * z analizy parametrów dla main_generational.py
 
-Najwyższą wartość funkcji fitness (716.33) uzyskano przy:
+  Najwyższą wartość funkcji fitness (716.33) uzyskano przy:
+  
+  max_generations: 100
+  
+  pop_size: 50
+  
+  mutation_std: 0.05
+  
+  crossover_p_swap: 0.5
+  
+  Niższa siła mutacji (0.05) generalnie prowadziła do lepszych wyników niż wyższa (0.1), co sugeruje, że przy tym problemie mniejsza wariancja zmian sprzyja stabilniejszej ewolucji.
+  Wyższe prawdopodobieństwo wymiany genów (0.5 vs 0.2) często korelowało z wyższym fitness, szczególnie w połączeniu z większą liczbą pokoleń, co potwierdza rolę rekombinacji w eksploracji przestrzeni rozwiązań.
 
-max_generations: 100
-
-pop_size: 50
-
-mutation_std: 0.05
-
-crossover_p_swap: 0.5
-
-Niższa siła mutacji (0.05) generalnie prowadziła do lepszych wyników niż wyższa (0.1), co sugeruje, że przy tym problemie mniejsza wariancja zmian sprzyja stabilniejszej ewolucji.
-Wyższe prawdopodobieństwo wymiany genów (0.5 vs 0.2) często korelowało z wyższym fitness, szczególnie w połączeniu z większą liczbą pokoleń, co potwierdza rolę rekombinacji w eksploracji przestrzeni rozwiązań.
+  * z analizy parametrów dla main_solve.py
