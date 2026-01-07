@@ -1,19 +1,24 @@
 # kontenery
 
-1. Reprezentacja rozwiązania
+## 1. Reprezentacja rozwiązania
 
-Genotyp jest wektorem liczb zmiennoprzecinkowych z zakresu [0, 1].
-Struktura chromosomu:
-Gen 0: Odpowiada za globalny kąt obrotu całego układu (wartość skalowana do 0-90 stopni).
-Kolejne pary genów: Każda para odpowiada za decyzję dotyczącą kolejnego potencjalnego kontenera w siatce:
-Pierwszy gen z pary: Wybór typu kontenera (Residential, Kitchen, Sanitary, Common).
-Drugi gen z pary: Orientacja kontenera (poziomy/pionowy).
+Genotyp jest wektorem liczb zmiennoprzecinkowych z zakresu `[0, 1]`.
 
-Dekodowanie (LayoutDecoder):
-Dekoder przesuwa się po obszarze (Area) z zadanym krokiem (step), próbując umieścić kontener zdefiniowany przez geny. Sprawdza przy tym dwa kluczowe warunki:
+### Struktura chromosomu
+- **Gen 0**  
+  Odpowiada za globalny kąt obrotu całego układu (wartość skalowana do 0–90 stopni).
 
-- Czy kontener mieści się całkowicie wewnątrz zdefiniowanego wielokąta.
-- Czy nie nakłada się na już wstawione kontenery.
+- **Kolejne pary genów**  
+  Każda para odpowiada za decyzję dotyczącą kolejnego potencjalnego kontenera w siatce:
+  - pierwszy gen z pary: wybór typu kontenera (Residential, Kitchen, Sanitary, Common)
+  - drugi gen z pary: orientacja kontenera (poziomy / pionowy)
+
+### Dekodowanie (LayoutDecoder)
+Dekoder przesuwa się po obszarze (`Area`) z zadanym krokiem (`step`), próbując umieścić kontener zdefiniowany przez geny.
+
+Sprawdzane warunki:
+- czy kontener mieści się całkowicie wewnątrz zdefiniowanego wielokąta
+- czy nie nakłada się na już wstawione kontenery
 
 2. Operatory, parametry, metoda selekcji
 
