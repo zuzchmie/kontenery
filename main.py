@@ -106,7 +106,6 @@ class ContainerPlacementProblem(ScalarProblem):
         self.decoder = decoder
 
     def evaluate(self, genome):
-        #trzeba dodać całą funkcje
         containers, _ = self.decoder.decode(genome)
         score = len(containers)
         
