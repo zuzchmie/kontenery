@@ -33,14 +33,18 @@ Jako metodę selekcji osobników do nowej populacji wybrano selekcję turniejow�
 ### 3. Funkcja oceny
 
 Wzór funkcji oceny:
-10*N - 2*D_k - 3*D_s - D_c + 20*R - P
+
+$$10 \cdot N - 2 \cdot D_k - 3 \cdot D_s - D_c + 20 \cdot R - P$$
 
 Gdzie:
-- N: Liczba kontenerów mieszkalnych (priorytetem jest ich maksymalizacja).
-- D_k, D_s, D_c: Odległość od kontenerów mieszkalnych do odpowiednio: kuchni, sanitariatów i części wspólnych
-- R: Współczynnik wolnej przestrzeni - algorytm jest nagradzany za pozostawienie pewnego "oddechu" przestrzennego.
-- P: Kara nakładana za brak kluczowych typów kontenerów (brak kuchni: -50, brak sanitariatów: -80, brak części wspólnej: -30) lub zbyt małą przestrzeń wolną.    
 
+$N$: Liczba kontenerów mieszkalnych (priorytetem jest ich maksymalizacja).
+
+$D_k, D_s, D_c$: Odległość od kontenerów mieszkalnych do odpowiednio: kuchni, sanitariatów i części wspólnych.
+
+$R$: Współczynnik wolnej przestrzeni – algorytm jest nagradzany za pozostawienie pewnego "oddechu" przestrzennego.
+
+$P$: Kara nakładana za brak kluczowych typów kontenerów (brak kuchni: $-50$, brak sanitariatów: $-80$, brak części wspólnej: $-30$) lub zbyt małą przestrzeń wolną.
 
 
 ### 4. **Wnioski**
